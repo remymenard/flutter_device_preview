@@ -213,6 +213,8 @@ class _DeviceFramePainter extends CustomPainter {
         screen,
         notchPath,
       );
+    } else { // line 216
+      screen = Path.combine( PathOperation.difference, screen, Path()..addRect(Offset(0, 0) & Size(0, 0),));
     }
 
     final bodyWithoutScreen =
